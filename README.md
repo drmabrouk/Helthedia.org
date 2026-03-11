@@ -17,7 +17,17 @@ The platform functions like a “Google for medical research,” allowing **adva
 ## Design Philosophy
 Clean, professional, and minimalistic interface with a **black, white, and grayscale color palette**, fully **responsive for all devices**, emphasizing usability, readability, and accessibility.
 
+## Sitemap & Structure
+- **Home / Landing:** Central search bar and featured topics.
+- **Search Results:** Advanced filtering by year, journal, study type, and open access.
+- **Research Detail:** Full metadata, abstract, DOI, and actions (Download, Save, Cite).
+- **Topics / Categories:** Cardiology, Oncology, Nutrition, etc.
+- **User Dashboard:** Bookmarks and saved searches.
+- **Auth:** Login and Registration (Email, OAuth).
+- **Admin Panel:** Management of entries, users, and analytics.
+- **Static Pages:** About, Contact, Privacy, Terms, Help Center.
+
 ## Tech Stack
 - Next.js 15
 - TypeScript
-- Tailwind CSS
+- Tailwind CSS 4
