@@ -1,0 +1,15 @@
+
+> tmp-project@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+
+✓ Starting...
+✓ Ready in 1047ms
+○ Compiling / ...
+ GET / 200 in 5.1s (compile: 4.6s, render: 468ms)
+ GET / 200 in 126ms (compile: 8ms, render: 119ms)
+ GET / 200 in 120ms (compile: 5ms, render: 115ms)
+ GET /search?q=vaccine 200 in 27ms (compile: 6ms, render: 21ms)
