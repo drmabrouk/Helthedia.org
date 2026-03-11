@@ -87,8 +87,8 @@ function SearchResultsContent() {
             <h2 className="hidden lg:block font-bold uppercase tracking-wider text-xs mb-6">Filters</h2>
 
             {/* Study Type */}
-            <div className="mb-8 border-t border-gray-100 lg:border-t-0 pt-6 lg:pt-0">
-              <h3 className="font-semibold text-sm mb-4">Study Type</h3>
+            <fieldset className="mb-8 border-t border-gray-100 lg:border-t-0 pt-6 lg:pt-0">
+              <legend className="font-semibold text-sm mb-4">Study Type</legend>
               <div className="grid grid-cols-1 gap-3">
                 {types.map(type => (
                   <label key={type} className="flex items-center group cursor-pointer">
@@ -97,16 +97,17 @@ function SearchResultsContent() {
                       className="w-4 h-4 border-black rounded-none appearance-none border checked:bg-black transition-colors mr-3 cursor-pointer"
                       checked={selectedTypes.includes(type)}
                       onChange={() => toggleType(type)}
+                      aria-label={`Filter by study type: ${type}`}
                     />
                     <span className="text-sm group-hover:text-gray-600">{type}</span>
                   </label>
                 ))}
               </div>
-            </div>
+            </fieldset>
 
             {/* Publication Year */}
-            <div className="mb-8 border-t border-gray-100 pt-6">
-              <h3 className="font-semibold text-sm mb-4">Year</h3>
+            <fieldset className="mb-8 border-t border-gray-100 pt-6">
+              <legend className="font-semibold text-sm mb-4">Year</legend>
               <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
                 {years.map(year => (
                   <label key={year} className="flex items-center group cursor-pointer">
@@ -115,16 +116,17 @@ function SearchResultsContent() {
                       className="w-4 h-4 border-black rounded-none appearance-none border checked:bg-black transition-colors mr-3 cursor-pointer"
                       checked={selectedYears.includes(year)}
                       onChange={() => toggleYear(year)}
+                      aria-label={`Filter by year: ${year}`}
                     />
                     <span className="text-sm group-hover:text-gray-600">{year}</span>
                   </label>
                 ))}
               </div>
-            </div>
+            </fieldset>
 
             {/* Journal */}
-            <div className="mb-8 border-t border-gray-100 pt-6 pb-4">
-              <h3 className="font-semibold text-sm mb-4">Journal</h3>
+            <fieldset className="mb-8 border-t border-gray-100 pt-6 pb-4">
+              <legend className="font-semibold text-sm mb-4">Journal</legend>
               <div className="grid grid-cols-1 gap-3">
                 {journals.map(journal => (
                   <label key={journal} className="flex items-start group cursor-pointer">
@@ -133,17 +135,18 @@ function SearchResultsContent() {
                       className="w-4 h-4 mt-0.5 border-black rounded-none appearance-none border checked:bg-black transition-colors mr-3 cursor-pointer flex-shrink-0"
                       checked={selectedJournals.includes(journal)}
                       onChange={() => toggleJournal(journal)}
+                      aria-label={`Filter by journal: ${journal}`}
                     />
                     <span className="text-xs group-hover:text-gray-600 leading-tight">{journal}</span>
                   </label>
                 ))}
               </div>
-            </div>
+            </fieldset>
           </div>
         </aside>
 
         {/* Results List */}
-        <main className="flex-grow">
+        <section className="flex-grow">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 pb-4 border-b border-gray-100 gap-4">
             <p className="text-sm text-gray-500">
               Showing <span className="text-black font-medium">{filteredResults.length}</span> results for <span className="text-black font-medium italic">"{query}"</span>
@@ -216,7 +219,7 @@ function SearchResultsContent() {
               </div>
             )}
           </div>
-        </main>
+        </section>
       </div>
     </div>
   );
